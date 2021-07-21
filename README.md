@@ -4,4 +4,4 @@ Because I didn't find any txAdmin announcers / notifys I created this simple one
 
 You can find the Notification I used here: [t-notify](https://github.com/TasoOneAsia/t-notify)
 
-!(https://i.imgur.com/1UmCafR.png)
+![](https://i.imgur.com/1UmCafR.png)
