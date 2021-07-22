@@ -35,6 +35,6 @@ end)
 
 AddEventHandler('txAdmin:events:playerWarned', function(target, author, reason)
     if Shared.warnedNotify then
-        riggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. target .. ' got warned from ' .. author .. '! Reason:' .. reason)
+        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. target .. ' got warned from ' .. author .. '! Reason:' .. reason)
     end
 end)
