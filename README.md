@@ -4,11 +4,8 @@ Because I didn't find any [txAdmin](https://txadm.in) announcers at the Forums I
 
 ![](https://i.imgur.com/1UmCafR.png)
 
-## Download:
-[txAnnouncer](https://github.com/endstoff/gh_txAnnouncer)
-
 You can find the Notification I used here: [t-notify](https://github.com/TasoOneAsia/t-notify)
 
 ## Check out our other Scripts!
-**[[PAID] Vehicle Registration](https://forum.cfx.re/t/release-paid-vehicle-registration/3889915)**
+**[[PAID] Vehicle Registration](https://forum.cfx.re/t/release-paid-vehicle-registration/3889915)**\n
 **[[FREE] Advertising](https://forum.cfx.re/t/release-free-advertising-script/3876142)**
