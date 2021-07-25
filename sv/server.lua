@@ -20,21 +20,3 @@ AddEventHandler('txAdmin:events:scheduledRestart', function(eventData)
         TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '1 Minute')
     end
 end)
-
-AddEventHandler('txAdmin:events:playerKicked', function(target, author, reason)
-    if Shared.kickedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. target .. ' got kicked from ' .. author .. '! Reason:' .. reason)
-    end
-end)
-
-AddEventHandler('txAdmin:events:playerBanned', function(target, author, reason)
-    if Shared.bannedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. target .. ' got banned from ' .. author .. '! Reason:' .. reason)
-    end
-end)
-
-AddEventHandler('txAdmin:events:playerWarned', function(target, author, reason)
-    if Shared.warnedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. target .. ' got warned from ' .. author .. '! Reason:' .. reason)
-    end
-end)
