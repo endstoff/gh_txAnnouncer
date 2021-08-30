@@ -1,11 +1,10 @@
 Shared = {}
 
-kickedNotify = true
-bannedNotify = true
-warnedNotify = true
+Shared.kickedNotify = true
+Shared.bannedNotify = true
+Shared.warnedNotify = true
 
 -- Notifications
-
 function SendRestartMessage(timeLeft)
 
     SetNotificationTextEntry('STRING')
@@ -35,9 +34,8 @@ function SendKickedMessage(msg)
         style = 'info',
         title = 'Information',
         message = msg,
-        duration = 10000,
+        duration = 30000,
         sound = true,
         position = 'top-center',
     }) ]]
-
 end
