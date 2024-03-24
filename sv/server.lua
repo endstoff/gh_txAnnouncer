@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 AddEventHandler('txAdmin:events:scheduledRestart', function(eventData)
     if eventData.secondsRemaining == 3600 then
         TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '60 Minutes')
@@ -35,5 +37,11 @@ end)
 AddEventHandler('txAdmin:events:playerWarned', function(eventData)
     if Shared.warnedNotify then
         TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. GetPlayerName(eventData.target) .. ' got warned from ' .. eventData.author .. '! Reason: ' .. eventData.reason)
+    end
+end)
+
+AddEventHandler('txAdmin:events:announcement', function(eventData)
+    if Shared.announceNotify then
+        TriggerClientEvent('gh_txAnnouncer:SendAnnounceMessage', -1, eventData.message)
     end
 end)

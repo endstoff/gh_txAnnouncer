@@ -1,6 +1,6 @@
 # Ghostscripts txAnnouncer
 
-Because I didn't find any [txAdmin](https://txadm.in) announcers at the Forums I decided to create this simple one. In the *shared.lua* file you can freely change the notification to the one you like. If you want to change the language you'll need to go into the *server.lua* file.
+Since I couldn't locate any [txAdmin](https://txadm.in) announcements on the forums, I opted to craft this straightforward one. Within the *shared.lua* file, you have the freedom to customize the notification to your preference. Should you wish to alter the language, you'll need to access the *server.lua* file.
 
 ![](https://i.imgur.com/1UmCafR.png)
 
