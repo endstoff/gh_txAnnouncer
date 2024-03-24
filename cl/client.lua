@@ -9,5 +9,5 @@ RegisterNetEvent("gh_txAnnouncer:SendKickedMessage", function(msg)
 end)
 
 RegisterNetEvent("gh_txAnnouncer:SendAnnounceMessage", function(msg)
-    SendAnnounceMessage(message)
+    SendAnnounceMessage(msg)
 end)

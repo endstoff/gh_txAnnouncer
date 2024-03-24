@@ -40,7 +40,7 @@ AddEventHandler('txAdmin:events:playerWarned', function(eventData)
     end
 end)
 
-AddEventHandler('txAdmin:events:sendAnnouncement', function(eventData)
+AddEventHandler('txAdmin:events:announcement', function(eventData)
     if Shared.announceNotify then
         TriggerClientEvent('gh_txAnnouncer:SendAnnounceMessage', -1, eventData.message)
     end

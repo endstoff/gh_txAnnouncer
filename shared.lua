@@ -57,7 +57,7 @@ function SendAnnounceMessage(msg)
         DrawNotification(0,1)
         --
     
-        --[[    Example Notification
+        --[[    Example Notification**
         exports['t-notify']:Custom({
             style = 'info',
             title = 'Information',

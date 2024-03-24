@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- FX
 fx_version 'cerulean'
 game 'gta5'
@@ -5,7 +6,7 @@ game 'gta5'
 -- Credits
 author 'Ghostscripts.xyz'
 description 'txAdmin Announces'
-version 'v1.0'
+version 'v1.1'
 
 server_scripts {
     'shared.lua',
