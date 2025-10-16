@@ -2,46 +2,46 @@
 
 AddEventHandler('txAdmin:events:scheduledRestart', function(eventData)
     if eventData.secondsRemaining == 3600 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '60 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 1800 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '30 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 900 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '15 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 600 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '10 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 300 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '5 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 240 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '4 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 180 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '3 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 120 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '2 Minutes')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     elseif eventData.secondsRemaining == 60 then
-        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, '1 Minute')
+        TriggerClientEvent('gh_txAnnouncer:SendRestartMessage', -1, eventData.translatedMessage)
     end
 end)
 
 AddEventHandler('txAdmin:events:playerKicked', function(eventData)
     if Shared.kickedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'Player ID ' .. eventData.target .. ' got kicked from ' .. eventData.author .. '! Reason: ' .. eventData.reason)
+        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'Spieler ID ' .. eventData.target .. ' wurde von ' .. eventData.author .. ' gekickt! Grund: ' .. eventData.reason)
     end
 end)
 
 AddEventHandler('txAdmin:events:playerBanned', function(eventData)
     if Shared.bannedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'Player ID ' .. eventData.target .. ' got banned from ' .. eventData.author .. '! Reason: ' .. eventData.reason)
+        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'Spieler ID ' .. eventData.target .. ' wurde von ' .. eventData.author .. ' gebannt! Grund: ' .. eventData.reason)
     end
 end)
 
 AddEventHandler('txAdmin:events:playerWarned', function(eventData)
     if Shared.warnedNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'The Player ' .. GetPlayerName(eventData.target) .. ' got warned from ' .. eventData.author .. '! Reason: ' .. eventData.reason)
+        TriggerClientEvent('gh_txAnnouncer:SendKickedMessage', -1, 'Der Spieler ' .. eventData.targetName .. ' wurde von ' .. eventData.author .. ' verwarnt! Grund: ' .. eventData.reason)
     end
 end)
 
 AddEventHandler('txAdmin:events:announcement', function(eventData)
     if Shared.announceNotify then
-        TriggerClientEvent('gh_txAnnouncer:SendAnnounceMessage', -1, eventData.message)
+        TriggerClientEvent('gh_txAnnouncer:SendAnnounceMessage', -1, eventData.message, eventData.author)
     end
 end)
