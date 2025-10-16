@@ -8,64 +8,34 @@ Shared.warnedNotify     = true
 Shared.announceNotify   = true
 
 -- Notifications
-function SendRestartMessage(timeLeft)
+function SendRestartMessage(translatedMessage)
+    exports['Notifier']:ShowNotification('Serverweite Ankündigung', translatedMessage, 'warning', 15000)
 
-    -- You can comment this out. only for testing purpose
+    --[[
     SetNotificationTextEntry('STRING')
-    AddTextComponentString('The server will be restarted in ' .. timeLeft)
+    AddTextComponentString(translatedMessage)
     DrawNotification(0,1)
-    --
-
-    --[[     Example Notification
-    exports['t-notify']:Custom({
-        style = 'info',
-        title = 'Information',
-        message = 'The server will be restarted in ' .. timeLeft,
-        duration = 10000,
-        sound = true,
-        position = 'top-center',
-    }) 
-    
-    You can also use TriggerEvent() ]]  
+    ]]
 end
 
 function SendKickedMessage(msg)
+    exports['Notifier']:ShowNotification('Serverweite Ankündigung', msg, 'warning', 15000)
 
-    -- You can comment this out. only for testing purpose
+    --[[
     SetNotificationTextEntry('STRING')
     AddTextComponentString(msg)
     DrawNotification(0,1)
-    --
-
-    --[[    Example Notification
-    exports['t-notify']:Custom({
-        style = 'info',
-        title = 'Information',
-        message = msg,
-        duration = 30000,
-        sound = true,
-        position = 'top-center',
-    }) 
-    
-    You can also use TriggerEvent() ]]  
+    ]]
 end
 
-function SendAnnounceMessage(msg)
-        -- You can comment this out. only for testing purpose
-        SetNotificationTextEntry('STRING')
-        AddTextComponentString(msg)
-        DrawNotification(0,1)
-        --
-    
-        --[[    Example Notification**
-        exports['t-notify']:Custom({
-            style = 'info',
-            title = 'Information',
-            message = msg,
-            duration = 30000,
-            sound = true,
-            position = 'top-center',
-        }) 
-        
-        You can also use TriggerEvent() ]]  
+function SendAnnounceMessage(msg, author)
+    exports['Notifier']:ShowNotification('Serverweite Ankündigung von ' .. author, msg, 'warning', 15000)
+
+    --[[
+    SetNotificationTextEntry('STRING')
+    AddTextComponentString('server-wide announcement from ' .. author, msg)
+    DrawNotification(0,1)
+    ]]
 end
+
+

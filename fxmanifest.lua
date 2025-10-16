@@ -5,8 +5,8 @@ game 'gta5'
 
 -- Credits
 author 'Ghostscripts.xyz'
-description 'txAdmin Announces'
-version 'v1.1'
+description 'txAdmin Announcer'
+version 'v1.2'
 
 server_scripts {
     'shared.lua',
