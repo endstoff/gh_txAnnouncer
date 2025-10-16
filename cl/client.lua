@@ -1,13 +1,13 @@
 ---@diagnostic disable: undefined-global
 
-RegisterNetEvent("gh_txAnnouncer:SendRestartMessage", function(timeLeft)
-    SendRestartMessage(timeLeft)
+RegisterNetEvent("gh_txAnnouncer:SendRestartMessage", function(translatedMessage)
+    SendRestartMessage(translatedMessage)
 end)
 
 RegisterNetEvent("gh_txAnnouncer:SendKickedMessage", function(msg)
     SendKickedMessage(msg)
 end)
 
-RegisterNetEvent("gh_txAnnouncer:SendAnnounceMessage", function(msg)
-    SendAnnounceMessage(msg)
+RegisterNetEvent("gh_txAnnouncer:SendAnnounceMessage", function(msg, author)
+    SendAnnounceMessage(msg, author)
 end)
